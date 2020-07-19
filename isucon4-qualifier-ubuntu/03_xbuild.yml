@@ -17,6 +17,7 @@
     - command: /home/isucon/env.sh bundle install
       args:
         chdir: /home/isucon/webapp/ruby
+      replace: dest=/home/isucon/.xbuild/ruby-install regexp='gems="bundler .*' replace='"$LOCATION"/bin/gem install --no-ri --no-rdoc bundler -v 2.1.3'
     # node
     - command: /home/isucon/.xbuild/node-install v0.10.31 /home/isucon/.local/node
       args:
